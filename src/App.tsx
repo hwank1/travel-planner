@@ -1,12 +1,13 @@
 import "./App.css";
-import MainPage from "./pages/Main/MainPage";
+import HomeCitySections from "./pages/Home/HomePage";
+
 import HeaderBar from "./shared/Header";
 
 function App() {
   return (
     <div>
       <HeaderBar />
-      <MainPage />
+      <HomeCitySections />
     </div>
   );
 }
