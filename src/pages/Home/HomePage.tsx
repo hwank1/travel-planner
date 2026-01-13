@@ -1,11 +1,8 @@
 import CityCard from "./components/CityCard";
-import tokyo from "@/assets/tokyo.jpg";
-import seoul from "@/assets/seoul.jpg";
-import busan from "@/assets/busan.jpg";
-import jeju from "@/assets/jeju.jpg";
-import osaka from "@/assets/osaka.jpg";
-import sapporo from "@/assets/sapporo.jpg";
+import { CITIES } from "@/features/cities/data/cities";
 export default function HomeCitySections() {
+  const kr = CITIES.filter((c) => c.country === "KR");
+  const jp = CITIES.filter((c) => c.country === "JP");
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
       {/* Korea */}
@@ -17,29 +14,9 @@ export default function HomeCitySections() {
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <CityCard
-            title="Seoul"
-            subtitle="Korea · 인기"
-            hashtags="#맛집 #핫플 #야경"
-            imageUrl={seoul}
-            badgeLeft="Korea"
-            badgeRight="인기"
-          />
-          <CityCard
-            title="Busan"
-            subtitle="Korea · 인기"
-            hashtags="#바다 #해운대 #야경"
-            imageUrl={busan}
-            badgeRight="인기"
-          />
-          <CityCard
-            title="Jeju"
-            subtitle="Korea · 인기"
-            hashtags="#자연 #힐링 #드라이브"
-            imageUrl={jeju}
-            badgeLeft="Korea"
-            badgeRight="인기"
-          />
+          {kr.map((city) => (
+            <CityCard key={city.id} {...city} />
+          ))}
         </div>
       </section>
 
@@ -55,30 +32,9 @@ export default function HomeCitySections() {
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <CityCard
-            title="Tokyo"
-            subtitle="Japan · 인기"
-            hashtags="#쇼핑 #도심 #야경"
-            imageUrl={tokyo}
-            badgeLeft="Japan"
-            badgeRight="인기"
-          />
-          <CityCard
-            title="Osaka"
-            subtitle="Japan · 인기"
-            hashtags="#먹방 #야경 #가성비"
-            imageUrl={osaka}
-            badgeLeft="Japan"
-            badgeRight="인기"
-          />
-          <CityCard
-            title="Sapporo"
-            subtitle="Japan · 인기"
-            hashtags="#스스키노 #설국 #비에이"
-            imageUrl={sapporo}
-            badgeLeft="Japan"
-            badgeRight="인기"
-          />
+          {jp.map((city) => (
+            <CityCard key={city.id} {...city} />
+          ))}
         </div>
       </section>
     </main>
