@@ -16,6 +16,8 @@ export type City = {
   imageUrl: string;
   badgeLeft?: string;
   badgeRight?: string;
+  lat?: number;
+  lon?: number;
 };
 
 export const CITIES: City[] = [
@@ -28,6 +30,8 @@ export const CITIES: City[] = [
     imageUrl: seoul,
     badgeLeft: "Korea",
     badgeRight: "인기",
+    lat: 37.5665,
+    lon: 126.978,
   },
   {
     id: "busan",
@@ -38,6 +42,8 @@ export const CITIES: City[] = [
     imageUrl: busan,
     badgeLeft: "Korea",
     badgeRight: "인기",
+    lat: 35.1796,
+    lon: 129.0756,
   },
   {
     id: "jeju",
@@ -48,6 +54,8 @@ export const CITIES: City[] = [
     imageUrl: jeju,
     badgeLeft: "Korea",
     badgeRight: "인기",
+    lat: 33.4996,
+    lon: 126.5312,
   },
 
   {
@@ -59,6 +67,8 @@ export const CITIES: City[] = [
     imageUrl: tokyo,
     badgeLeft: "Japan",
     badgeRight: "인기",
+    lat: 35.6762,
+    lon: 139.6503,
   },
   {
     id: "osaka",
@@ -69,6 +79,8 @@ export const CITIES: City[] = [
     imageUrl: osaka,
     badgeLeft: "Japan",
     badgeRight: "인기",
+    lat: 34.6937,
+    lon: 135.5023,
   },
   {
     id: "sapporo",
@@ -79,5 +91,7 @@ export const CITIES: City[] = [
     imageUrl: sapporo,
     badgeLeft: "Japan",
     badgeRight: "인기",
+    lat: 43.0618,
+    lon: 141.3545,
   },
 ];

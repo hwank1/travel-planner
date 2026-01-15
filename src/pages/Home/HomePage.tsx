@@ -5,7 +5,7 @@ export default function HomeCitySections() {
   const jp = CITIES.filter((c) => c.country === "JP");
   return (
     <main className="mx-auto max-w-6xl px-4 py-8">
-      {/* Korea */}
+      {/* 한국 도시카드 */}
       <section>
         <h2 className="text-2xl font-semibold tracking-tight">한국</h2>
 
@@ -20,10 +20,10 @@ export default function HomeCitySections() {
         </div>
       </section>
 
-      {/* Divider */}
+      {/* 중간 선 */}
       <div className="my-14 h-px w-full bg-gray-100" />
 
-      {/* Japan */}
+      {/* 일본 도시카드 */}
       <section>
         <h2 className="text-2xl font-semibold tracking-tight">일본</h2>
 
