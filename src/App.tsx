@@ -1,14 +1,17 @@
-import "./App.css";
-import HomeCitySections from "./pages/Home/HomePage";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderBar from "./shared/Header";
+import HomeCitySections from "./pages/Home/HomePage";
+import CityPage from "./pages/City/CityPage";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <HeaderBar />
-      <HomeCitySections />
-    </div>
+      <Routes>
+        <Route path="/" element={<HomeCitySections />} />
+        <Route path="/city/:cityId" element={<CityPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

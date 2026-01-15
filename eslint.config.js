@@ -27,17 +27,14 @@ export default [
       "react-hooks": reactHooks,
     },
     rules: {
-      // React Refresh 관련
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
 
-      // React Hooks 규칙
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
 
-      // 네 스타일 취향에 맞게 바꾸면 됨 (일단 보편적인 편)
       "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     },
   },
