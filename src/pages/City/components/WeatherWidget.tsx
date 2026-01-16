@@ -1,25 +1,46 @@
-export default function WeatherWidget() {
+import {
+  getIconUrl,
+  type CurrentWeatherData,
+} from "@/features/cities/data/weather/api/openWeather";
+import type { City } from "@/types/City";
+// CityHero 안에 있는 해당 지역 날씨 UI
+export default function WeatherWidget({
+  city,
+  data,
+  loading,
+  error,
+}: {
+  city: City;
+  data: CurrentWeatherData | null;
+  loading: boolean;
+  error: string | null;
+}) {
   return (
-    <div className="w-full md:w-{260px} rounded-2xl bg-white/85 p-4 shadow-sm ">
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="text-2xl font-bold text-black">현재 날씨</div>
-          <div className="mt-1 text-3xl font-semibold leading-none">-°</div>
-          <div className="mt-2 text-xl text-gray-600">설명</div>
-        </div>
+    <div className="w-full md:w-[350px] rounded-2xl bg-white/85 p-4 shadow-sm backdrop-blur">
+      {loading && (
+        <div className="text-sm text-gray-600">날씨 불러오는 중…</div>
+      )}
+      {error && <div className="text-sm text-red-600">오류: {error}</div>}
 
-        <div className="min-h-[104px] w-12 rounded-xl bg-gray-100" />
-      </div>
-
-      {/* 예보 자리(선택) */}
-      <div className="mt-3 grid grid-cols-5 gap-1">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <div key={i} className="rounded-lg bg-gray-50 p-1 text-center">
-            <div className="h-6 w-6 mx-auto rounded bg-gray-100" />
-            <div className="mt-1 h-3 rounded bg-gray-100" />
+      {data && (
+        <div className="flex items-center gap-1 justify-between">
+          <div>
+            <div className="text-xl font-semibold text-black">
+              {city.title}의 현재 날씨
+            </div>
+            <div className="mt-2 text-2xl font-semibold leading-none">
+              {Math.round(data.main.temp)}°
+            </div>
+            <div className="mt-2 text-base text-gray-600">
+              {data.weather[0]?.description}
+            </div>
           </div>
-        ))}
-      </div>
+
+          {data.weather[0]?.icon && (
+            <img alt="icon" src={getIconUrl(data.weather[0].icon)} />
+          )}
+        </div>
+      )}
     </div>
   );
 }
