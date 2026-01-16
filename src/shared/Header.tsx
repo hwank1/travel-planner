@@ -14,7 +14,7 @@ export default function HeaderBar({
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-xl bg-black" />
+          <button className="h-8 w-8 rounded-xl bg-black" />
           <span className="text-sm font-bold tracking-tight">
             KR-JP 여행 플래너
           </span>

@@ -4,21 +4,7 @@ import jeju from "@/assets/jeju.jpg";
 import tokyo from "@/assets/tokyo.jpg";
 import osaka from "@/assets/osaka.jpg";
 import sapporo from "@/assets/sapporo.jpg";
-
-export type Country = "KR" | "JP";
-
-export type City = {
-  id: string;
-  country: Country;
-  title: string;
-  subtitle: string;
-  hashtags: string;
-  imageUrl: string;
-  badgeLeft?: string;
-  badgeRight?: string;
-  lat?: number;
-  lon?: number;
-};
+import { City } from "@/types/City";
 
 export const CITIES: City[] = [
   {
