@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { City } from "@/features/cities/data/cities";
+import type { City } from "@/types/City";
 type CityCardProps = City;
 
 export default function CityCard(props: CityCardProps) {
