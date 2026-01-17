@@ -35,6 +35,7 @@ export default function ForecastStrip({
               className="mx-auto h-14 w-14"
               src={getIconUrl(d.icon)}
             />
+            <span className="text-sm">{d.description}</span>
             <div className="text-sm">
               <span className="font-medium">최고 {d.tempMax}°</span>
               <span className="text-gray-400">/최저 {d.tempMin}°</span>
