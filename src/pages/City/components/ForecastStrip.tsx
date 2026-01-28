@@ -25,10 +25,10 @@ export default function ForecastStrip({
   if (!daily.length) return null;
 
   return (
-    <section className="mt-4 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+    <section className="mt-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
       <div className="grid grid-cols-5 gap-2">
         {daily.map((d) => (
-          <div key={d.date} className="rounded-xl bg-gray-50 p-2 text-center">
+          <div key={d.date} className="rounded-xl bg-gray-100 p-2 text-center">
             <div className="text-sm text-gray-500">{mmdd(d.date)}</div>
             <img
               alt={d.icon}

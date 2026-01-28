@@ -1,4 +1,6 @@
-export const tokyoRestaurants = [
+import type { Place } from "@/types/Place";
+
+export const tokyoPlace: Place[] = [
   {
     id: 1,
     name: "스시 다이",
