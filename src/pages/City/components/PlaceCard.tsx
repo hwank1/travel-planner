@@ -2,7 +2,7 @@ import { Place } from "@/types/Place";
 type PlaceCardProps = Place;
 export default function PlaceCard(props: PlaceCardProps) {
   return (
-    <div className="mt-4 p-4 w-96 h-[430px] rounded-3xl shadow-lg  border-gray-100">
+    <div className="mt-4 p-4 w-96 h-[430px] rounded-3xl shadow-lg border-gray-100">
       <div className="relative  mb-4  rounded-3xl w-full h-2/3">
         <img
           src={props.image}
