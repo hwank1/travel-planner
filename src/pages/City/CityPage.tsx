@@ -3,11 +3,8 @@ import { CITIES } from "@/features/cities/data/cities";
 import CityHero from "./components/CityHero";
 import ForecastStrip from "./components/ForecastStrip";
 import { useCityWeather } from "@/hooks/useCityWeather";
-import PlaceCard from "./components/PlaceCard";
-import { tokyoPlace } from "@/data/tokyoPlace";
+import PlaceSection from "./components/PlaceSection";
 export default function CityPage() {
-  const restaurant = tokyoPlace.filter((p) => p.type === "restaurant");
-  const attraction = tokyoPlace.filter((p) => p.type === "attraction");
   const { cityId } = useParams();
   const city = CITIES.find((c) => c.id === cityId);
 
@@ -19,19 +16,11 @@ export default function CityPage() {
   if (!city) return <div className="p-6">도시 없음: {cityId}</div>;
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-8">
+    <main className="mx-auto max-w-7xl px-4 py-8">
       <CityHero city={city} weather={{ current, loading, error }} />
       <ForecastStrip daily={daily} loading={loading} error={error} />
-      <div className="">
-        {restaurant.map((place) => (
-          <PlaceCard key={place.id} {...place} />
-        ))}
-      </div>
-      <div>
-        {attraction.map((place) => (
-          <PlaceCard key={place.id} {...place} />
-        ))}
-      </div>
+      <PlaceSection type="restaurant" title="맛집" />
+      <PlaceSection type="attraction" title="명소" />
     </main>
   );
 }
