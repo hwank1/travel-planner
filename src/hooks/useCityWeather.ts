@@ -3,7 +3,7 @@ import {
   fetchForecast,
   fetchWeather,
   type CurrentWeatherData,
-} from "@/features/cities/data/weather/api/openWeather";
+} from "@/api/openWeather";
 import {
   toDailyForecast,
   type DailyForecast,

@@ -1,6 +1,6 @@
 import type { City } from "@/types/City";
 import WeatherWidget from "./WeatherWidget";
-import type { CurrentWeatherData } from "@/features/cities/data/weather/api/openWeather";
+import type { CurrentWeatherData } from "@/api/openWeather";
 
 type CityHeroProps = {
   city: City;

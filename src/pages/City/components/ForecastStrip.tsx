@@ -1,4 +1,4 @@
-import { getIconUrl } from "@/features/cities/data/weather/api/openWeather";
+import { getIconUrl } from "@/api/openWeather";
 import type { DailyForecast } from "@/features/cities/data/weather/utils/forecast";
 
 export default function ForecastStrip({
