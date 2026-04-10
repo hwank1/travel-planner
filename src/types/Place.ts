@@ -8,4 +8,5 @@ export type Place = {
   image: string;
   category: string;
   type: PlaceType;
+  regularOpeningHours: boolean;
 };

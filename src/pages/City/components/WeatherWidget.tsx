@@ -1,7 +1,4 @@
-import {
-  getIconUrl,
-  type CurrentWeatherData,
-} from "@/features/cities/data/weather/api/openWeather";
+import { getIconUrl, type CurrentWeatherData } from "@/api/openWeather";
 import type { City } from "@/types/City";
 // CityHero 안에 있는 해당 지역 날씨 UI
 export default function WeatherWidget({
