@@ -17,14 +17,17 @@ export default function PlaceCard(props: PlaceCardProps) {
           <button className="rounded-3xl h-8 w-8 bg-white/90">♡</button>
         </div>
         <div className="absolute bottom-4 left-4">
-          <p className="mb-1 font-bold text-white">{props.address}</p>
+          <p className="mb-1 font-bold text-white"></p>
           <p className="text-white">{props.name}</p>
         </div>
       </div>
       <div className="h-1/3 rounded-3xl mb-4 p-4  flex flex-col gap-1 text-sm">
         <div>{props.type}</div>
-        <div>{props.rating}</div>
-        <div>영업시간: 10:00 ~ 20:00</div>
+        <div>평점: {props.rating}</div>
+        <div>
+          현재 영업 여부:{" "}
+          {props.regularOpeningHours ? "영업 중" : "영업 중 아님"}
+        </div>
       </div>
     </div>
   );
