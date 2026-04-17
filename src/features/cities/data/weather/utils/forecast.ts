@@ -1,4 +1,4 @@
-import type { ForecastWeatherData } from "../api/openWeather";
+import type { ForecastWeatherData } from "@/api/openWeather";
 
 export type DailyForecast = {
   date: string; // "YYYY-MM-DD"
