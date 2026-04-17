@@ -12,14 +12,26 @@ export default function ForecastStrip({
 }) {
   if (loading)
     return (
-      <div className="mt-4 rounded-2xl border bg-white p-4">
-        예보 불러오는 중…
-      </div>
+      <section className="mt-4 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+        <div className="grid grid-cols-5 gap-2">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="flex-1 bg-gray-100 rounded-2xl flex flex-col items-center gap-2 p-4"
+            >
+              <div className="h-4 w-10 rounded bg-gray-200 skeleton" />
+              <div className="h-10 w-10 rounded-full bg-gray-200 skeleton" />
+              <div className="h-3 w-12 rounded bg-gray-200 skeleton" />
+              <div className="h-3 w-24 rounded bg-gray-200 skeleton" />
+            </div>
+          ))}
+        </div>
+      </section>
     );
   if (error)
     return (
-      <div className="mt-4 rounded-2xl border bg-white p-4 text-red-600">
-        예보 오류: {error}
+      <div>
+        <p className="text-sm">해당 지역 날씨 정보를 불러오지 못했어요.🥺</p>
       </div>
     );
   if (!daily.length) return null;
