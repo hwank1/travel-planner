@@ -26,8 +26,8 @@ export default function PlaceSection({ type, title }: PlaceSectionProps) {
         currentCity.lat,
         currentCity.lon,
       );
-      const mapped = data.places.map((p: GooglePlace) => ({
-        id: p.id,
+      const mapped = data.places.map((p: GooglePlace, index: number) => ({
+        id: index,
         name: p.displayName.text,
         address: p.formattedAddress,
         rating: p.rating,
@@ -52,7 +52,7 @@ export default function PlaceSection({ type, title }: PlaceSectionProps) {
       <p className="mt-4 font-bold text-2xl">{title}</p>
       <div className="flex gap-4">
         {visiblePlaces.map((p) => (
-          <PlaceCard key={p.address} {...p} />
+          <PlaceCard key={p.id} {...p} />
         ))}
       </div>
       <button
