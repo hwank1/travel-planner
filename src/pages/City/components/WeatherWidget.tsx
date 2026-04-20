@@ -13,9 +13,16 @@ export default function WeatherWidget({
   error: string | null;
 }) {
   return (
-    <div className="w-full md:w-[350px] rounded-2xl bg-white/85 p-4 shadow-sm backdrop-blur">
+    <div className="w-full md:w-[350px] min-h-[132px] rounded-2xl bg-white/85 p-4 shadow-sm ">
       {loading && (
-        <div className="text-sm text-gray-600">날씨 불러오는 중…</div>
+        <div className="flex items-center justify-between gap-1 m-1">
+          <div>
+            <div className="h-6 w-40 rounded skeleton mb-2" />
+            <div className="h-8 w-10 rounded skeleton mb-2" />
+            <div className="h-4 w-16 rounded skeleton" />
+          </div>
+          <div className="h-12 w-12 rounded-full skeleton" />
+        </div>
       )}
       {error && <div className="text-sm text-red-600">오류: {error}</div>}
 

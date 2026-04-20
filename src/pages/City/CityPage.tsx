@@ -4,6 +4,7 @@ import CityHero from "./components/CityHero";
 import ForecastStrip from "./components/ForecastStrip";
 import { useCityWeather } from "@/hooks/useCityWeather";
 import PlaceSection from "./components/PlaceSection";
+import NotFound from "../NotFound";
 export default function CityPage() {
   const { cityId } = useParams();
   const city = CITIES.find((c) => c.id === cityId);
@@ -13,7 +14,7 @@ export default function CityPage() {
     city?.lon,
   );
 
-  if (!city) return <div className="p-6">도시 없음: {cityId}</div>;
+  if (!city) return <NotFound />;
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8">
