@@ -30,8 +30,10 @@ export default function ForecastStrip({
     );
   if (error)
     return (
-      <div>
-        <p className="text-sm">해당 지역 날씨 정보를 불러오지 못했어요.🥺</p>
+      <div className="h-24 mt-4 rounded-2xl border border-red-100 p-6 text-center">
+        <p className="text-2xl text-red-500">
+          해당 지역 날씨 정보를 불러오지 못했어요.🥺
+        </p>
       </div>
     );
   if (!daily.length) return null;
