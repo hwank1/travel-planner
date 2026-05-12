@@ -24,7 +24,9 @@ export default function WeatherWidget({
           <div className="h-12 w-12 rounded-full skeleton" />
         </div>
       )}
-      {error && <div className="text-sm text-red-600">오류: {error}</div>}
+      {error && (
+        <div className="text-1xl text-center text-red-600">오류: {error}</div>
+      )}
 
       {data && (
         <div className="flex items-center gap-1 justify-between">
