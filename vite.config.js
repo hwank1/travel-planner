@@ -9,4 +9,13 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  server: {
+    proxy: {
+      "/api/exchange": {
+        target: "https://api.frankfurter.app",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/exchange/, ""),
+      },
+    },
+  },
 });

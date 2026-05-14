@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
-
+import ExchangRate from "./ExchageRate";
 type HeaderBarProps = {
   rightPrimaryText?: string;
   rightSecondaryText?: string;
@@ -8,7 +8,6 @@ type HeaderBarProps = {
 
 export default function HeaderBar({
   rightPrimaryText = "내 일정",
-  rightSecondaryText = "날짜",
 }: HeaderBarProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur">
@@ -27,16 +26,9 @@ export default function HeaderBar({
         <div className="flex flex-1 justify-center">
           <SearchBar />
         </div>
-
+        <ExchangRate />
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="hidden rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-gray-800 hover:bg-gray-50 sm:inline-flex"
-          >
-            {rightSecondaryText}
-          </button>
-
           <button
             type="button"
             className="inline-flex items-center gap-2 rounded-xl bg-black px-3 py-2 text-sm font-medium text-white hover:opacity-90"
