@@ -1,7 +1,8 @@
 export type Country = "KR" | "JP";
 
 export type City = {
-  id: string;
+  id: number;
+  cityId: string;
   country: Country;
   title: string;
   subtitle: string;
