@@ -1,6 +1,17 @@
 import { Place } from "@/types/Place";
+import useFavoriteStore from "@/store/useFavoriteStore";
 type PlaceCardProps = Place;
 export default function PlaceCard(props: PlaceCardProps) {
+  const { favorites, addFavorite, removeFavorite, isFavorite } =
+    useFavoriteStore();
+  const liked = isFavorite(props.cityId, props.type, props.id);
+  const toggleFavorite = () => {
+    if (liked) {
+      removeFavorite(props.cityId, props.type, props.id);
+    } else {
+      addFavorite(props);
+    }
+  };
   return (
     <div className="mt-4 p-4 w-96 h-[430px] rounded-3xl shadow-lg border border-gray-100">
       <div className="relative  mb-4  rounded-3xl w-full h-2/3">
@@ -14,7 +25,12 @@ export default function PlaceCard(props: PlaceCardProps) {
           <span className="rounded-2xl flex items-center justify-center h-8 w-16 bg-white/90 text-gray-800">
             인기
           </span>
-          <button className="rounded-3xl h-8 w-8 bg-white/90">♡</button>
+          <button
+            className="bg-white/90 h-8 w-8 rounded-3xl"
+            onClick={toggleFavorite}
+          >
+            {liked ? "❤️" : "🤍"}
+          </button>
         </div>
         <div className="absolute bottom-4 left-4">
           <p className="mb-1 font-bold text-white"></p>
