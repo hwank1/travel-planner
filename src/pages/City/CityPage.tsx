@@ -7,7 +7,7 @@ import PlaceSection from "./components/PlaceSection";
 import NotFound from "../NotFound";
 export default function CityPage() {
   const { cityId } = useParams();
-  const city = CITIES.find((c) => c.id === cityId);
+  const city = CITIES.find((c) => c.cityId === cityId);
 
   const { current, daily, loading, error } = useCityWeather(
     city?.lat,

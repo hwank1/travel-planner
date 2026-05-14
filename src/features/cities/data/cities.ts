@@ -8,7 +8,8 @@ import { City } from "@/types/City";
 
 export const CITIES: City[] = [
   {
-    id: "seoul",
+    id: 1,
+    cityId: "Seoul",
     country: "KR",
     title: "Seoul",
     subtitle: "Korea · 인기",
@@ -20,7 +21,8 @@ export const CITIES: City[] = [
     lon: 126.978,
   },
   {
-    id: "busan",
+    id: 2,
+    cityId: "Busan",
     country: "KR",
     title: "Busan",
     subtitle: "Korea · 인기",
@@ -32,7 +34,8 @@ export const CITIES: City[] = [
     lon: 129.0756,
   },
   {
-    id: "jeju",
+    id: 3,
+    cityId: "Jeju",
     country: "KR",
     title: "Jeju",
     subtitle: "Korea · 인기",
@@ -45,7 +48,8 @@ export const CITIES: City[] = [
   },
 
   {
-    id: "tokyo",
+    id: 4,
+    cityId: "Tokyo",
     country: "JP",
     title: "Tokyo",
     subtitle: "Japan · 인기",
@@ -57,7 +61,8 @@ export const CITIES: City[] = [
     lon: 139.6503,
   },
   {
-    id: "osaka",
+    id: 5,
+    cityId: "Osaka",
     country: "JP",
     title: "Osaka",
     subtitle: "Japan · 인기",
@@ -69,7 +74,8 @@ export const CITIES: City[] = [
     lon: 135.5023,
   },
   {
-    id: "sapporo",
+    id: 6,
+    cityId: "Sapporo",
     country: "JP",
     title: "Sapporo",
     subtitle: "Japan · 인기",

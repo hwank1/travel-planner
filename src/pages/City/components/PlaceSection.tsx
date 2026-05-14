@@ -14,7 +14,7 @@ type PlaceSectionProps = {
 // Place 카드 필터 슬라이드 기능
 export default function PlaceSection({ type, title }: PlaceSectionProps) {
   const { cityId } = useParams();
-  const currentCity = CITIES.find((c) => c.id === cityId);
+  const currentCity = CITIES.find((c) => c.cityId === cityId);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [places, setPlaces] = useState<Place[]>([]);
   const [loading, setloading] = useState(true);
@@ -31,6 +31,7 @@ export default function PlaceSection({ type, title }: PlaceSectionProps) {
         );
         const mapped = data.places.map((p: GooglePlace, index: number) => ({
           id: index,
+          cityId: cityId,
           name: p.displayName.text,
           address: p.formattedAddress,
           rating: p.rating,
@@ -47,7 +48,7 @@ export default function PlaceSection({ type, title }: PlaceSectionProps) {
     };
 
     fetchPlaces();
-  }, [currentCity]);
+  }, [cityId]);
   if (loading)
     return (
       <div className="relative px-6">

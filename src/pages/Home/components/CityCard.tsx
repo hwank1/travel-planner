@@ -4,7 +4,7 @@ type CityCardProps = City;
 
 export default function CityCard(props: CityCardProps) {
   return (
-    <Link to={`/city/${props.id}`} className="block">
+    <Link to={`/city/${props.cityId}`} className="block">
       <article className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition  hover:shadow-md">
         {/* Image: 4:5 */}
 
