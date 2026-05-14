@@ -2,8 +2,7 @@ import { Place } from "@/types/Place";
 import useFavoriteStore from "@/store/useFavoriteStore";
 type PlaceCardProps = Place;
 export default function PlaceCard(props: PlaceCardProps) {
-  const { favorites, addFavorite, removeFavorite, isFavorite } =
-    useFavoriteStore();
+  const { addFavorite, removeFavorite, isFavorite } = useFavoriteStore();
   const liked = isFavorite(props.cityId, props.type, props.id);
   const toggleFavorite = () => {
     if (liked) {

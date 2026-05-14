@@ -15,7 +15,7 @@ export default function ExchangRate() {
     <div className="flex items-center gap-[10px] rounded-xl border border-gray-200 bg-white px-[14px] py-2">
       <div className="flex items-center gap-[5px]">
         <span className="text-[13px] text-gray-900">환율</span>
-        <span className="text-[13px] text-gray-900">1,000JPY</span>
+        <span className="text-[13px] text-gray-900">100JPY</span>
         <span className="text-[13px] text-gray-500">→</span>
         <span className="text-[14px] font-medium text-gray-900">
           {jpyRate.toFixed(1)}KRW
