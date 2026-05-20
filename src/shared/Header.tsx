@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import ExchangRate from "./ExchageRate";
+import { useAuthStore } from "@/store/useAuthStore";
 
 export default function HeaderBar({}) {
+  const { toggleModal } = useAuthStore();
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
@@ -25,18 +27,17 @@ export default function HeaderBar({}) {
         <ExchangRate />
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="inline-flex items-center gap-2 rounded-xl bg-black px-3 py-2 text-sm font-medium text-white hover:opacity-50"
-          >
-            내 일정
-            <span className="text-white/70">›</span>
-          </button>
           <Link to={"/favorites"}>
             <button className="flex-row items-center p-2 text-sm h-9 w-16 text-white rounded-xl hover:opacity-50 bg-black">
               좋아요
             </button>
           </Link>
+          <button
+            onClick={toggleModal}
+            className="flex-row items-center p-2 text-sm h-9 w-16 text-white rounded-xl hover:opacity-50 bg-black"
+          >
+            로그인
+          </button>
         </div>
       </div>
     </header>
