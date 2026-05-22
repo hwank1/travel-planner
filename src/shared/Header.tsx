@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
+
 import ExchangRate from "./ExchageRate";
 import { useAuthStore } from "@/store/useAuthStore";
 
 export default function HeaderBar({}) {
-  const { toggleModal } = useAuthStore();
+  const { currentUser, toggleModal, logout } = useAuthStore();
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
@@ -21,9 +21,7 @@ export default function HeaderBar({}) {
         </div>
 
         {/* Search */}
-        <div className="flex flex-1 justify-center">
-          <SearchBar />
-        </div>
+        <div className="flex flex-1 justify-center"></div>
         <ExchangRate />
         {/* Actions */}
         <div className="flex items-center gap-2">
@@ -32,12 +30,48 @@ export default function HeaderBar({}) {
               좋아요
             </button>
           </Link>
-          <button
-            onClick={toggleModal}
-            className="flex-row items-center p-2 text-sm h-9 w-16 text-white rounded-xl hover:opacity-50 bg-black"
-          >
-            로그인
-          </button>
+          {currentUser ? (
+            <div className="flex gap-2">
+              <span
+                className="flex-row
+              items-center
+              p-2
+              text-sm
+              h-9
+              w-20
+              text-center
+              text-white
+              rounded-xl
+              hover:opacity-50
+              bg-black"
+              >
+                {currentUser.nickName}님
+              </span>
+              <button
+                className="flex-row
+              items-center
+              p-2
+              text-sm
+              h-9
+              w-20
+              text-center
+              text-white
+              rounded-xl
+              hover:opacity-50
+              bg-black"
+                onClick={logout}
+              >
+                로그아웃
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={toggleModal}
+              className="flex-row text-center items-center p-2 text-sm h-9 w-16 text-white rounded-xl hover:opacity-50 bg-black"
+            >
+              로그인
+            </button>
+          )}
         </div>
       </div>
     </header>
