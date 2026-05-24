@@ -1,10 +1,10 @@
-import { useModalStore, useAuthStore } from "@/store/useAuthStore";
+import { useAuthStore } from "@/store/useAuthStore";
 import { SignupFormData } from "@/types/SignupFormData";
 import { useState } from "react";
-import { signupVerify } from "@/pages/auth/SingupVarify";
+import { signupVerify } from "@/pages/auth/singupVarify";
 
 function SignupForm() {
-  const { signup, toggleModal } = useAuthStore();
+  const { signup, toggleModal, setMode } = useAuthStore();
   const [formData, setFormData] = useState<SignupFormData>({
     nickName: "",
     email: "",
@@ -36,12 +36,6 @@ function SignupForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex flex-col gap-3 m-2">
-        <div className="flex justify-between">
-          <p className="text-xl font-semibold">회원가입</p>
-          <button type="button" className="w-4 h-4" onClick={toggleModal}>
-            ⨯
-          </button>
-        </div>
         <div className="flex flex-col gap-1">
           {/* 닉네임 */}
           <label className="text-base">닉네임</label>
@@ -103,7 +97,9 @@ function SignupForm() {
         </button>
         <div className="flex justify-center text-sm gap-1">
           <p>이미 계정이 있으신가요?</p>
-          <button className="">로그인</button>
+          <button onClick={() => setMode("login")} className="">
+            로그인
+          </button>
         </div>
       </div>
     </form>
