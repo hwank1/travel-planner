@@ -1,24 +1,24 @@
-type SearchBarProps = {
-  placeholder?: string;
-};
+// type SearchBarProps = {
+//   placeholder?: string;
+// };
 
-export default function SearchBar({
-  placeholder = "도시 검색 (서울, 오사카...)",
-}: SearchBarProps) {
-  return (
-    <div className="w-full max-w-[500px]">
-      <div className="flex items-center gap-2 rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-sm transition focus-within:border-gray-300">
-        <span className="select-none text-gray-400">⌕</span>
+// export default function SearchBar({
+//   placeholder = "도시 검색 (서울, 오사카...)",
+// }: SearchBarProps) {
+//   return (
+//     <div className="w-full max-w-[500px]">
+//       <div className="flex items-center gap-2 rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-sm transition focus-within:border-gray-300">
+//         <span className="select-none text-gray-400">⌕</span>
 
-        <input
-          placeholder={placeholder}
-          className="w-full bg-transparent text-sm outline-none placeholder:text-gray-400"
-        />
+//         <input
+//           placeholder={placeholder}
+//           className="w-full bg-transparent text-sm outline-none placeholder:text-gray-400"
+//         />
 
-        <span className="hidden select-none rounded-xl bg-gray-50 px-2 py-1 text-xs text-gray-500 sm:inline-flex">
-          Enter
-        </span>
-      </div>
-    </div>
-  );
-}
+//         <span className="hidden select-none rounded-xl bg-gray-50 px-2 py-1 text-xs text-gray-500 sm:inline-flex">
+//           Enter
+//         </span>
+//       </div>
+//     </div>
+//   );
+// }
