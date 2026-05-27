@@ -8,7 +8,7 @@ export default function CityCard(props: CityCardProps) {
       <article className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition  hover:shadow-md">
         {/* Image: 4:5 */}
 
-        <div className="relative aspect-[4/5] w-full bg-gray-100">
+        <div className="relative aspect-[4/3] sm:aspect-[4/5] w-full bg-gray-100">
           <img
             src={props.imageUrl}
             alt={props.title}

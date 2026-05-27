@@ -43,16 +43,19 @@ export default function ForecastStrip({
       <div className="grid grid-cols-5 gap-2">
         {daily.map((d) => (
           <div key={d.date} className="rounded-xl bg-gray-100 p-2 text-center">
-            <div className="text-sm text-gray-500">{mmdd(d.date)}</div>
+            <div className="text-[8px] md:text-sm text-gray-500">
+              {mmdd(d.date)}
+            </div>
             <img
               alt={d.icon}
-              className="mx-auto h-14 w-14"
+              className="mx-auto h-5 w-5 md:h-14 md:w-14"
               src={getIconUrl(d.icon)}
             />
-            <span className="text-sm">{d.description}</span>
-            <div className="text-sm">
+            <span className="text-[8px] md:text-sm">{d.description}</span>
+            <div className="text-[8px] md:text-sm">
               <span className="font-medium">최고 {d.tempMax}°</span>
-              <span className="text-gray-400">/최저 {d.tempMin}°</span>
+              <br className="md:hidden" />
+              <span className="text-gray-400">최저 {d.tempMin}°</span>
             </div>
           </div>
         ))}
