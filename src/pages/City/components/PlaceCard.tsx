@@ -37,7 +37,7 @@ export default function PlaceCard(props: PlaceCardProps) {
         </div>
       </div>
       <div className="h-1/3 rounded-3xl mb-4 p-4  flex flex-col gap-1 text-sm">
-        <div>{props.type}</div>
+        <div>{props.type === "restaurant" ? "맛집" : "명소"}</div>
         <div>평점: {props.rating}</div>
         <div>
           현재 영업 여부:{" "}
