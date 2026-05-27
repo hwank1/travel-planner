@@ -90,25 +90,30 @@ export default function PlaceSection({ type, title }: PlaceSectionProps) {
     setCurrentIndex(currentIndex + 1);
   };
   const visiblePlaces = places.slice(currentIndex, currentIndex + 3);
+  const isMobile = window.innerWidth < 768;
+  const displayPlaces = isMobile ? places : visiblePlaces;
   return (
-    <div className="relative px-6 overflow-visible">
+    <div className="relative px-6">
       <p className="mt-4 font-bold text-2xl">{title}</p>
-      <div className="flex gap-4">
-        {visiblePlaces.map((p) => (
+      <div
+        className="flex gap-4 overflow-x-auto md:overflow-visible pb-2"
+        style={{ scrollbarWidth: "none" }}
+      >
+        {displayPlaces.map((p) => (
           <PlaceCard key={p.id} {...p} />
         ))}
       </div>
       <button
         onClick={leftBtnClickHandler}
         disabled={currentIndex === 0}
-        className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10"
+        className="hidden md:block absolute -left-4 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10"
       >
         ←
       </button>
       <button
         onClick={rightBtnClickHandler}
         disabled={currentIndex + 3 >= places.length}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10"
+        className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full w-10 h-10"
       >
         →
       </button>

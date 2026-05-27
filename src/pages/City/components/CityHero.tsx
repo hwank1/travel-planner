@@ -16,7 +16,7 @@ export default function CityHero({ city, weather }: CityHeroProps) {
 
   return (
     <section className="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm">
-      <div className="relative aspect-[16/6] w-full bg-gray-100">
+      <div className="relative aspect-[16/9] md:aspect-[16/6] w-full bg-gray-100">
         <img
           src={city.imageUrl}
           alt={city.title}

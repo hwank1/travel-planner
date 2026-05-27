@@ -21,7 +21,7 @@ export default function HomeCitySections() {
       </section>
 
       {/* 중간 선 */}
-      <div className="my-14 h-px w-full bg-gray-100" />
+      <div className="my-14 h-px w-full bg-gray-400" />
 
       {/* 일본 도시카드 */}
       <section>

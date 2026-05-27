@@ -12,8 +12,8 @@ export default function PlaceCard(props: PlaceCardProps) {
     }
   };
   return (
-    <div className="mt-4 p-4 w-96 h-[430px] rounded-3xl shadow-lg border border-gray-200">
-      <div className="relative  mb-4  rounded-3xl w-full h-2/3">
+    <div className="mt-4 p-4 w-72 shrink-0 md:w-96 rounded-3xl shadow-lg border border-gray-200">
+      <div className="relative mb-4 rounded-3xl w-full h-48 md:h-64">
         <img
           src={props.image}
           alt={props.name}
