@@ -65,7 +65,7 @@ export default function LoginForm() {
 
         <div className="flex justify-center text-sm gap-1">
           <p>계정이 없으신가요?</p>
-          <button onClick={() => setMode("signup")} className="">
+          <button onClick={() => setMode("signup")} className="text-blue-500">
             회원가입
           </button>
         </div>

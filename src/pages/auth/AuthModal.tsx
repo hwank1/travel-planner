@@ -10,8 +10,8 @@ function AuthModal() {
   return (
     <div className="fixed inset-0  bg-black/40 flex items-center justify-center z-50">
       <div className="bg-white flex flex-col rounded-2xl p-8 h-[600px] w-[500px]">
-        <div className="flex justify-between items-center mb-4">
-          <p className="text-xl font-semibold">
+        <div className="flex justify-between items-center mt-4 mb-4">
+          <p className="text-xl flex-1 text-center font-semibold">
             {mode === "login" ? "로그인" : "회원가입"}
           </p>
           <button type="button" onClick={toggleModal}>
