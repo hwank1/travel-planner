@@ -7,8 +7,8 @@
 한국과 일본의 약 12개 주요 도시를 대상으로, 맛집·관광지·숙소 정보를 제공하는 여행 플래너입니다.  
 Google Places API 실데이터를 기반으로 하되, 정적 JSON 캐싱 전략을 통해 API 비용 없이 빠른 응답을 제공합니다.
 
-🔗 **배포 링크:** [https://your-deploy-url.vercel.app](https://your-deploy-url.vercel.app)  
-📁 **GitHub:** [https://github.com/yourgithub/travel-planner](https://github.com/yourgithub/travel-planner)
+🔗 **배포 링크:** [https://travel-planner-ruby-delta.vercel.app/]  
+📁 **GitHub:** [https://github.com/hwank1/travel-planner]
 
 ---
 
