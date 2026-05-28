@@ -1,14 +1,14 @@
-# 🗾 Korea-Japan Travel Planner
+# Korea-Japan Travel Planner
 
 > 한국과 일본의 주요 도시 여행 정보를 한눈에 확인할 수 있는 여행 플래너 웹앱
 
-## 📌 프로젝트 소개
+## 프로젝트 소개
 
 한국과 일본의 약 12개 주요 도시를 대상으로, 맛집·관광지·숙소 정보를 제공하는 여행 플래너입니다.  
 Google Places API 실데이터를 기반으로 하되, 정적 JSON 캐싱 전략을 통해 API 비용 없이 빠른 응답을 제공합니다.
 
-🔗 **배포 링크:** [https://travel-planner-ruby-delta.vercel.app/]  
-📁 **GitHub:** [https://github.com/hwank1/travel-planner]
+**배포 링크:** [https://travel-planner-ruby-delta.vercel.app/]  
+ **GitHub:** [https://github.com/hwank1/travel-planner]
 
 ---
 
@@ -101,7 +101,7 @@ npm run dev
 
 ---
 
-## 📝 환경 변수
+## 환경 변수
 
 ```env
 VITE_GOOGLE_PLACES_API_KEY=your_api_key_here
@@ -109,7 +109,7 @@ VITE_GOOGLE_PLACES_API_KEY=your_api_key_here
 
 ---
 
-## 📅 개발 일정
+## 개발 일정
 
 | 기간     | 내용                                   |
 | -------- | -------------------------------------- |
