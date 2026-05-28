@@ -12,9 +12,9 @@ Google Places API 실데이터를 기반으로 하되, 정적 JSON 캐싱 전략
 
 ---
 
-## ✨ 구현 기능
+## 구현 기능
 
-### ✅ 완료
+### 완료
 
 - **PlaceCard / PlaceSection 컴포넌트**
   - `type` / `title` props 기반의 재사용 가능한 구조 설계
@@ -35,7 +35,7 @@ Google Places API 실데이터를 기반으로 하되, 정적 JSON 캐싱 전략
   - `useState`로 현재 인덱스 관리
   - 이전 / 다음 버튼으로 PlaceCard 전환
 
-### 🚧 개발 중
+### 개발 중
 
 - Amadeus API를 활용한 항공편 검색 기능
 - 도시 간 항공편 조회 (출발지 · 목적지 · 날짜 입력)
@@ -55,7 +55,7 @@ Google Places API 실데이터를 기반으로 하되, 정적 JSON 캐싱 전략
 
 ---
 
-## 📁 프로젝트 구조
+## 프로젝트 구조
 
 ```
 src/
@@ -72,7 +72,7 @@ src/
 
 ---
 
-## 💡 기술적 의사결정
+## 기술적 의사결정
 
 ### Google Places API 정적 JSON 캐싱
 
@@ -81,7 +81,7 @@ src/
 
 ---
 
-## 🚀 로컬 실행 방법
+## 로컬 실행 방법
 
 ```bash
 # 저장소 클론
